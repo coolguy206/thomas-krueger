@@ -29,6 +29,7 @@ if ( is_home() || is_front_page() ) : // Home or Front Page
 
 </title>
 <meta name="viewport" content="initial-scale=1.0, width=device-width">
+<meta name="description" content="<?php if(is_page()){ echo get_post_meta($post->ID, 'excerpt', true); } elseif(is_single()){ echo get_the_excerpt(); } ?>">
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/jquery-ui-1.10.4.custom.min.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">

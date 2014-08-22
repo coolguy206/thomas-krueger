@@ -1,0 +1,1297 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+
+    Theme Name: Thomas Krueger WP theme
+
+    Description: Thomas Krueger WP theme is a 2 column theme, with a fixed menu and header. The theme includes several, jQuery powered features such as a responsive home page image slideshow, a click sliding search bar, and a click sliding mobile main menu. The theme also features: Vertical Hover Dropdown menu and customizable main/client menu & Widgetized Sidebar.
+
+    Author: David Thanphilom
+
+    Version: 1.0
+
+    Author URI: http://davidtproductions.com/
+
+    Tags: white, fixed-width, two-columns, custom-menu, right-sidebar, sticky-post, featured-images
+
+*/
+@font-face
+{
+font-family: euro;
+src: url("/fonts/eurosti-webfont.eot"),
+
+	 url("fonts/eurosti-webfont.ttf"),
+
+	 url("fonts/eurosti-webfont.svg"),
+
+	 url("fonts/eurosti-webfont.woff");
+}
+
+
+* {
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+h1 span {
+	display: none;
+}
+.accordion .searchForm, .box710 .searchForm {
+	display: block;
+}
+.sidebar-toggle {
+	text-transform: uppercase;
+	display: none;
+}
+.sidebar-toggle:hover, .sidebar-toggle:focus {
+	cursor: pointer;
+	color:  #ae0011;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+#submit {
+	width: auto;
+	padding: 5px;
+}
+.commentlist {
+	list-style-type: none;
+	
+}
+.commentlist li {
+	margin-bottom: 20px;
+}
+.reply {
+	font-family: 'Bad Script', cursive;
+}
+body {
+
+	font-size: 1em;
+
+	line-height: 1.5em;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+h1, h2, h3 {
+
+	font-family: 'Bad Script', cursive;
+	margin-bottom: 10px;
+}
+
+h1 {
+
+	font-size: 2em;
+
+	margin-top: 10px;
+
+}
+
+h2 {
+
+	font-size: 1.5em;
+
+	margin-top: 10px;
+
+}
+
+h3 {
+
+	font-size: 1.125em;
+
+	margin-top: 10px;
+
+}
+
+p {
+
+	margin-bottom: 20px;
+
+}
+
+a {
+
+	color: #ae0011;
+
+	text-decoration: none;
+
+	font-weight: normal;
+
+}
+
+a:hover, a:focus {
+
+	color: #000;
+
+}
+
+a img {
+
+	border: 3px solid #ae0011;
+
+}
+a img:hover, a img:focus  {
+
+	border: 3px solid #000;
+
+}
+
+ul, ol {
+
+	margin-bottom: 20px;
+
+}
+ul {
+
+   padding-left:  2.25em;
+
+}
+
+ol {
+
+    padding-left: 2.25em;
+
+}
+blockquote {
+
+	font-family: 'Bad Script', cursive;
+
+	margin-bottom: 20px;
+
+}
+label {
+
+	font-size: 1.5em;
+
+	display: block;
+
+	margin-bottom: 10px;
+
+}
+
+input {
+
+	/*display: block;*/
+
+	margin-bottom: 10px;
+
+	width: 100%;
+
+	border: 1px solid #000;
+
+	padding: 5px 0px 5px 0px;
+
+}
+input[type=radio], input[type=checkbox] {
+	width: auto;
+	margin-right: 10px;
+}
+select {
+
+	margin-bottom: 10px;
+
+	/*width: 100%;*/
+
+	border: 1px solid #000;
+
+	text-transform: uppercase;
+
+}
+
+option {
+
+	font-size: 1.125em;
+
+	text-indent: 5px;
+
+	padding: 5px 0px 5px 0px;
+
+	text-transform: uppercase;
+
+}
+
+textarea {
+
+	width: 100%;
+
+	margin-bottom: 10px;
+
+	border: 1px solid #000;
+
+	min-height: 150px;
+
+	padding: 5px 0px 5px 0px;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+input[type=submit] {
+
+	width: 30%;
+
+	font-size: 1.5em;
+
+	background: #000;
+
+	color: #fff;
+
+}
+
+input[type=submit]:hover, input[type=submit]:hover {
+
+	background:  #ae0011;
+
+	cursor: pointer;
+
+}
+img, embed, object, video, iframe {
+
+	max-width:  98.5%;
+
+}
+
+.wrapper {
+
+	max-width: 990px;
+
+	margin: auto;
+
+	overflow: hidden;
+
+	padding: 10px;
+
+}
+
+/*-------------------------HEADER------------------------------------- */
+
+header {
+
+	overflow: hidden;
+
+	margin-bottom: 20px;
+
+}
+
+.responsive {
+
+	clear: both;
+
+	display: none;
+
+}
+
+.responsive:hover {
+
+	cursor: pointer;
+
+	color: #ae0011;
+
+}
+
+/*-------------------------CLIENT-ACCESS----------------------------------- */
+
+.client-access {
+
+	overflow: hidden;
+
+}
+
+.client-access a {
+
+	float: right;
+
+	font-weight: bold;
+
+	text-transform: uppercase;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.client-access a:hover, .client-access a:focus {
+
+	color: #000;
+
+}
+
+/*-------------------------BOX190----------------------------------- */
+
+.box190 {
+
+	width: 390px;
+
+	float: right;
+
+}
+
+/*-------------------------SOCIAL-MEDIA------------------------------------ */
+
+.social-media {
+
+	overflow: hidden;
+
+	list-style-type: none;
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+
+.social-media a {
+	
+	color: #000;
+
+}
+
+.social-media a:hover, .social-media a:focus  {
+
+	color: #ae0011;
+
+}
+
+.social-media li {
+	
+	float: left;
+
+	margin-right: 10px;
+
+	width: 70px;
+
+	text-align: right;
+
+}
+
+.social-media li:last-of-type {
+
+	margin: 0px;
+
+}
+
+#search:hover {
+
+	cursor: pointer;
+
+}
+
+/*-------------------------SEARCH------------------------------------- */
+
+.searchForm {
+
+	overflow: hidden;
+
+	border: 1px solid #000;	
+
+	padding: 0px;
+
+	margin: 0px;
+
+	display: none;
+
+	margin-top: 10px;
+
+}
+
+.searchForm input {
+
+	border: none;
+
+	width: 270px;
+
+	float: left;
+
+	padding: 5px 0px 5px 5px;
+
+}
+
+.searchForm button {
+
+	width: 70px;
+
+	border: none;
+
+	text-align: right;
+
+	padding: 5px;
+
+	float: right;
+
+	background: none;
+
+}
+
+.searchForm button:hover, .searchForm button:focus {
+
+	cursor: pointer;
+
+	color: #ae0011;
+
+}
+
+/*-------------------------BOX750------------------------------------- */
+
+.box750 {
+	
+	width: 430px;
+
+	float: left;
+
+}
+.box750 a img {
+
+	border: none;
+
+}
+
+/*-------------------------NAV------------------------------------- */
+
+nav {
+
+	overflow: hidden;
+
+	margin-bottom: 20px;
+
+}
+
+nav a {
+
+	display: block;
+
+	text-transform: uppercase;
+
+	font-size: 1.5em;
+
+	color: #000;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+	font-weight: normal;
+
+}
+
+nav a:hover, nav a:focus, .current-menu-item a {
+
+	color: #ae0011;
+
+}
+
+nav ul {
+
+	overflow: hidden;
+
+	list-style-type: none;
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+
+nav li {
+
+	float: left;
+
+	width: 150px;
+
+	margin-right: 10px;
+
+}
+
+nav li:hover .sub-menu {
+
+	display: block;
+
+}
+
+/*-------------------------SUBMENU------------------------------------- */
+
+.sub-menu {
+
+	position: absolute;
+
+	background: #fff;
+
+	text-indent: 10px;
+
+	border: 1px solid #000;
+
+	display: none;
+
+	z-index: 10000;
+
+}
+
+.sub-menu li {
+
+	float: none;
+
+}
+
+.sub-menu a {
+
+	font-size: 1.125em;
+
+}
+
+/*-------------------------CONTENT------------------------------------- */
+
+.content {
+
+	overflow: hidden;
+
+	margin-bottom: 20px;
+
+	min-height: 400px;
+
+}
+
+/*-------------------------HOME------------------------------------- */
+
+#home .box470 {
+
+	width: 470px;
+
+}
+#home .box470:last-of-type {
+
+	padding-right: 6px;
+
+}
+/*-------------------------MAIN------------------------------------- */
+
+.box710 {
+
+	width: 430px;
+
+	float: left;
+}
+
+.box230 {
+
+	width: 350px;
+
+	float: right;
+
+	padding-right: 6px;
+
+}
+.box230 li a {
+
+	text-transform: uppercase;
+
+}
+.box230 select {
+
+	width: 100%;
+
+}
+
+
+/*-------------------------CLIENT-ACCESS------------------------------------- */
+
+.clients {
+
+	list-style-type: none;
+
+}
+
+.clients li {
+
+	margin-bottom: 20px;
+
+}
+
+/*-------------------------BLOG------------------------------------- */
+
+.blog {
+
+	margin-bottom: 20px;
+
+	padding-top: 10px;
+
+}
+
+.blog p {
+
+	clear: both;
+
+}
+.previous-next {
+
+	clear: both;
+
+	padding: 10px 0px 10px 0px;
+
+}
+
+.previous-next a {
+
+	color: #000;
+
+}
+
+.previous-next a:hover, .previous-next a:focus {
+
+	color: #ae0011;
+
+}
+
+/*-------------------------SINGLE------------------------------------- */
+
+.single h1 {
+	
+	margin-bottom: 10px;
+
+}
+
+.post-categories {
+
+	list-style-type: none;
+
+	float: left;
+
+	margin-right: 10px;
+
+	padding: 0px; 
+	text-transform: uppercase;
+
+}
+
+.info {
+
+	overflow: hidden;
+
+	margin-bottom: 10px;
+
+}
+
+.clock {
+
+	font-family: 'Bad Script', cursive;
+
+	font-size: 1.125em;
+
+}
+span.float-right a {
+
+	margin-right: 10px;
+}
+
+/*-------------------------FOOTER------------------------------------- */
+
+footer a {
+
+	color: #000;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+	font-weight: normal;
+
+}
+
+footer a:hover, footer a:focus {
+
+	color: #ae0011;
+
+}
+footer ul {
+
+	list-style-type: none;
+
+	margin: 0px;
+
+	padding: 0px;
+
+}
+/*-------------------------CLASSES------------------------------------- */
+
+.float-right {
+
+	float: right;
+
+}
+
+.float-left {
+
+	float: left;
+
+}
+
+.margins {
+
+	margin-right: 10px;
+
+}
+
+.designer {
+
+	font-family: "euro";
+
+}
+
+.align-right {
+
+	text-align: right;
+
+}
+.read-more {
+	display: block;
+	font-family: 'Bad Script', cursive;
+
+}
+
+/*-------------------------PRINT------------------------------------- */
+
+@media print {
+
+/*-------------------------CONTENT------------------------------------- */
+
+.content {
+
+	overflow: visible;
+
+	margin-bottom: 0px;
+
+	min-height: auto;
+
+}
+
+/*-------------------------CLIENT-ACCESS------------------------------------- */
+
+.client-access {
+
+	display: none;
+
+}
+
+/*-------------------------BOX190------------------------------------- */
+
+.box190 {
+
+	display: none;
+
+}
+
+/*-------------------------BOX750------------------------------------- */
+
+.box750 {
+
+	width: 100%;
+
+	display: block;
+
+}
+
+/*-------------------------NAV------------------------------------- */
+
+nav {
+
+	display: none;
+
+}	
+
+/*-------------------------HOME------------------------------------- */
+
+#home .box470 {
+
+	width: 100%;
+
+	margin-right: 0px;
+
+	display: block;
+
+	clear: both;
+
+}
+
+#home .box470 .float-left {
+
+	float: none;
+
+}
+
+/*-------------------------MAIN------------------------------------- */
+
+.box710 {
+
+	width: 100%;
+
+	margin-right: 0px;
+
+}
+
+.box230 {
+
+	display: none;
+
+}
+
+/*-------------------------BLOG------------------------------------- */
+
+.blog {
+
+	overflow: visible;
+
+	margin-bottom: 20px;
+
+	padding-top: 10px;
+
+}
+
+.previous-next {
+
+	display: none;
+
+}
+
+/*-------------------------SINGLE------------------------------------- */
+
+.category {
+
+	display: none;
+
+}
+
+.info {
+
+	display: none;
+
+}
+
+/*-------------------------FOOTER------------------------------------- */
+
+footer {
+
+	display: none;
+
+}
+
+}
+
+/*-------------------------RESPONSIVE------------------------------------- */
+
+@media screen and (max-width: 1024px) {
+
+/*-------------------------HEADER----------------------------------- */
+
+/*-------------------------BOX190----------------------------------- */
+
+.box190 {
+
+	width: 39.393%; /*390/990 */
+
+}
+
+/*-------------------------SOCIAL-MEDIA------------------------------------ */
+
+.social-media li {
+	
+	margin-right: 02.564%; /*10/390 */
+
+	width: 17.948%; /*70/390 */
+
+}
+
+/*-------------------------SEARCH------------------------------------- */
+
+.searchForm input {
+
+	width: 69.230%; /*270/390 */
+
+	padding: 5px 0px 5px 01.282%;
+
+}
+
+.searchForm button {
+
+	width: 17.948%; /*70/390 */
+
+	padding: 01.282%; /*5/390 */
+
+}
+
+/*-------------------------BOX750------------------------------------- */
+
+.box750 {
+
+	width: 43.434%; /*430/990 */
+
+}
+
+/*-------------------------NAV------------------------------------- */
+
+nav li {
+
+	width: 15.1515%; /*150/990*/
+
+	margin-right: 01.010%; /*10/990*/
+
+}
+
+/*-------------------------HOME------------------------------------- */
+
+#home .box470 {
+
+	width: 47.474%; /*470/990*/
+
+}
+
+/*-------------------------MAIN------------------------------------- */
+
+.box710 {
+
+	width: 47.474%; /*430/990 */
+
+}
+
+.box230 {
+
+	width: 35.353%; /*350/990 */
+
+	padding-right: .606%; /*6/990 */
+
+}
+
+/*-------------------------SINGLE------------------------------------- */
+
+span.float-right a {
+
+	margin-right: 02.325%; /*10/430 */
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+/*-------------------------HEADER----------------------------------- */
+
+.previous-next {
+	overflow: hidden;
+}
+.responsive {
+
+	display: block;
+
+}
+.sidebar-toggle {
+
+	display: block;
+}
+/*-------------------------CLIENT-ACCESS----------------------------------- */
+
+.client-access {
+
+	margin-bottom: 20px;
+
+}
+
+.client-access a {
+
+	float: none;
+
+}
+
+/*-------------------------BOX190----------------------------------- */
+
+.box190 {
+
+	width: 100%;
+
+}
+
+/*-------------------------SOCIAL-MEDIA------------------------------------ */
+
+.social-media {
+
+	margin-bottom: 20px;
+
+}
+.social-media li {
+
+	text-align: left;
+
+}
+
+
+/*-------------------------SEARCH------------------------------------- */
+
+.searchForm {
+
+	margin-bottom: 20px;
+
+}
+
+.searchForm button {
+
+	text-align: center;
+
+}
+/*-------------------------BOX750----------------------------------- */
+
+.box750 {
+
+	width: 100%;
+
+}
+
+/*-------------------------NAV------------------------------------- */
+
+nav {
+
+	display: none;
+
+}
+
+nav li {
+
+	width: 100%;
+
+	margin-right:0%;
+
+	float: none;
+
+	margin-bottom: 10px;
+
+}
+
+/*-------------------------SUBMENU------------------------------------- */
+
+.sub-menu {
+
+	position: relative;
+
+	border: none;
+
+	display: block;
+
+}
+
+/*-------------------------HOME------------------------------------- */
+
+#home .box470 {
+
+	width: 98%;
+
+	float: none;
+
+	margin-right: 0%;
+
+	margin-bottom: 20px;
+
+}
+
+/*-------------------------MAIN------------------------------------- */
+
+.box710 {
+
+	width: 98%; 
+
+	margin-bottom: 20px;
+
+	float: none;
+
+}
+
+.box230 {
+
+	width: 98%;
+
+	display: none;
+	
+	float: none;
+
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+/*-------------------------FOOTER------------------------------------- */
+
+.copyright {
+
+	display: none;
+
+}
+
+}
+
+@media screen and (max-width: 320px) {
+
+/*-------------------------SINGLE------------------------------------- */
+
+.single h1 {
+
+	line-height: 1.5em;
+
+}
+
+}
+
+/* =WordPress Core
+
+-------------------------------------------------------------- */
+
+.alignnone {
+
+    margin: 5px 20px 20px 0;
+
+}
+
+
+
+.aligncenter,
+
+div.aligncenter {
+
+    display: block;
+
+    margin: 5px auto 5px auto;
+
+}
+
+
+
+.alignright {
+
+    float:right;
+
+    margin: 5px 0 20px 20px;
+
+}
+
+
+
+.alignleft {
+
+    float: left;
+
+    margin: 5px 20px 20px 0;
+
+}
+
+
+
+.aligncenter {
+
+    display: block;
+
+    margin: 5px auto 5px auto;
+
+}
+
+
+
+a img.alignright {
+
+    float: right;
+
+    margin: 5px 0 20px 20px;
+
+}
+
+
+
+a img.alignnone {
+
+    margin: 5px 20px 20px 0;
+
+}
+
+
+
+a img.alignleft {
+
+    float: left;
+
+    margin: 5px 20px 20px 0;
+
+}
+
+
+
+a img.aligncenter {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto
+
+}
+
+
+
+.wp-caption {
+
+    background: #fff;
+
+    border: 1px solid #f0f0f0;
+
+    max-width: 96%; /* Image does not overflow the content area */
+
+    padding: 5px 3px 10px;
+
+    text-align: center;
+
+}
+
+
+
+.wp-caption.alignnone {
+
+    margin: 5px 20px 20px 0;
+
+}
+
+
+
+.wp-caption.alignleft {
+
+    margin: 5px 20px 20px 0;
+
+}
+
+
+
+.wp-caption.alignright {
+
+    margin: 5px 0 20px 20px;
+
+}
+
+
+
+.wp-caption img {
+
+    border: 0 none;
+
+    height: auto;
+
+    margin: 0;
+
+    max-width: 98.5%;
+
+    padding: 0;
+
+    width: auto;
+
+}
+
+
+
+.wp-caption p.wp-caption-text {
+
+    font-size: 11px;
+
+    line-height: 17px;
+
+    margin: 0;
+
+    padding: 0 4px 5px;
+
+}

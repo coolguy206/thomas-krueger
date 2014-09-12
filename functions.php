@@ -1,6 +1,6 @@
 <?php
 
-
+//MENUS
 
 register_nav_menus( array(
 
@@ -10,7 +10,11 @@ register_nav_menus( array(
 
 ) );
 
+//POST THUMBNAILS
+
 add_theme_support( 'post-thumbnails' );
+
+//SIDEBARS
 
 register_sidebar( array(
 	'id' => 'right-sidebar',
@@ -29,6 +33,8 @@ register_sidebar( array(
 ) );
 
 
+//THE EXCERPT
+
 function excerpt_read_more_link($output) {
 
  global $post;
@@ -44,6 +50,8 @@ add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
+//REMOVE WIDTH HEIGHT
+
 function remove_width_attribute( $html ) {
 
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
@@ -52,3 +60,50 @@ function remove_width_attribute( $html ) {
 
 }
 
+//ADD NEW PAGE TO ADMIN
+function new_page(){
+	add_theme_page('Custom', 'Custom', 'edit_theme_options', 'new_page', 'custom');
+}
+add_action('admin_menu', 'new_page');
+
+//custom function
+function custom(){ ?>
+	<div class="wrap">
+		<h2>This is a form</h2>
+		<form method="post" action="options.php">
+		
+			<?php submit_button(); ?>
+		</form>
+	</div>	
+<?php }
+
+//ADD A SECTION
+function section_example($wp_customize){
+	$wp_customize->add_section(
+	'example',
+		array(
+			'title' => 'Settings',
+			'description' => 'This is the settings'
+		)
+	);
+	
+//ADD A SETTING
+$wp_customize->add_setting(
+	'Setting',
+		array(
+			'default' => 'default text'
+		)
+);	
+
+//ADD A CONTROL
+$wp_customize->add_control(
+	'Setting',
+		array(
+			'label' => 'default text',
+			'section' => 'example',
+			'text' => 'text'
+		)
+);
+	
+}
+add_action('customize_register', 'section_example');

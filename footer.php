@@ -1,6 +1,7 @@
 </section><!--.content-->
 
 <footer>
+<img src="<?php echo get_theme_mod( 'img-upload', 'No settings yet.' ); ?>">
 <ul>
 <li>
 <a href="<?php echo get_permalink(get_page_by_title( 'Contact' )); ?>" class="margins"><i class="fa fa-envelope fa-lg margins"></i>Contact</a> <a href="tel:2065551234"><i class="fa fa-phone fa-lg margins"></i>(206)555-1234</a>

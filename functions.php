@@ -77,9 +77,10 @@ function custom(){ ?>
 	</div>	
 <?php }
 
-//ADD A SECTION
+
 function section_example($wp_customize){
-	$wp_customize->add_section(
+//ADD A SECTION
+$wp_customize->add_section(
 	'example',
 		array(
 			'title' => 'Settings',
@@ -103,6 +104,22 @@ $wp_customize->add_control(
 			'section' => 'example',
 			'text' => 'text'
 		)
+);
+
+//ADD IMAGE UPLOADER SETTING
+$wp_customize->add_setting('img-upload' );
+
+//ADD CONTROL FOR IMAGE UPLOADER
+$wp_customize->add_control(
+new WP_Customize_Image_Control(
+        $wp_customize,
+        'img-upload',
+        array(
+            'label' => 'Image Upload',
+            'section' => 'example',
+            'settings' => 'img-upload'
+        )
+    )
 );
 	
 }
